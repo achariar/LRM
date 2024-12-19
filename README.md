@@ -10,12 +10,7 @@ This repository provides a guide to running linear regression in R, focusing on 
 - Required libraries: `ggplot2`, `gridExtra`, `dplyr`, `car`, `reshape2`
 
 ### Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
-   ```
-2. Install the required R packages:
+Install the required R packages:
    ```R
    install.packages(c("ggplot2", "gridExtra", "dplyr", "car", "reshape2"))
    ```

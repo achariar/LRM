@@ -57,7 +57,7 @@ dist_pop <- ggplot(data, aes(x = pop)) +
 
 grid.arrange(dist_pce, dist_pop, ncol = 2)
 ```
-![Image Placeholder 1](1.png)
+![Image Placeholder 1](images/1.png)
 
 **Interpretation:**
 - The histogram reveals that `pce` is positively skewed, suggesting the need for a logarithmic transformation.
@@ -73,7 +73,7 @@ library(dplyr)
 data <- data %>%
   mutate(log_pce = log(pce))
 ```
-![Image Placeholder 2](2.png)
+![Image Placeholder 2](images/2.png)
 
 **Interpretation:**
 - Applying a logarithmic transformation to `pce` normalizes its distribution, making it suitable for regression.
@@ -94,8 +94,8 @@ ggplot(cor_melt, aes(Var1, Var2, fill = value)) +
   theme_minimal() +
   labs(title = "Correlation Matrix")
 ```
-![Image Placeholder 3](3.png)
-![Image Placeholder 4](4.png)
+![Image Placeholder 3](images/3.png)
+![Image Placeholder 4](images/4.png)
 
 
 **Interpretation:**
@@ -113,7 +113,7 @@ model_vif <- lm(log_pce ~ pop + psavert + unemploy, data = data)
 vif_values <- vif(model_vif)
 print(vif_values)
 ```
-![Image Placeholder 5](5.png)
+![Image Placeholder 5](images/5.png)
 
 **Interpretation:**
 - A VIF above 5 suggests moderate multicollinearity, while values above 10 indicate severe multicollinearity.
@@ -128,7 +128,7 @@ print(vif_values)
 model <- lm(log_pce ~ psavert + unemploy, data = data)
 summary(model)
 ```
-![Image Placeholder 6](6.png)
+![Image Placeholder 6](images/6.png)
 
 **Interpretation:**
 - Significant predictors (`psavert` and `unemploy`) help explain the variance in `log_pce`.
@@ -147,9 +147,9 @@ ggplot(data, aes(x = fitted(model), y = residuals)) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   labs(title = "Residuals vs Fitted Values")
 ```
-![Image Placeholder 7](7.png)
-![Image Placeholder 8](8.png)
-![Image Placeholder 9](9.png)
+![Image Placeholder 7](images/7.png)
+![Image Placeholder 8](images/8.png)
+![Image Placeholder 9](images/9.png)
 
 **Interpretation:**
 - Residual diagnostics indicate assumptions of linearity and homoscedasticity are reasonably met.

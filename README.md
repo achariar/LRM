@@ -149,18 +149,3 @@ ggplot(data, aes(x = fitted(model), y = residuals)) +
 **Interpretation:**
 - Residual diagnostics indicate assumptions of linearity and homoscedasticity are reasonably met.
 - Minor deviations in residual plots are acceptable within practical limits.
-
----
-
-### Practical Implications
-
-1. **Policy Recommendations:**
-   - Lower savings rates might boost consumption.
-   - Consider addressing multicollinearity for better model interpretability.
-
-2. **Model Limitations:**
-   - Include additional predictors (e.g., income, inflation) to enhance model accuracy.
-
-3. **Future Steps:**
-   - Validate the model with out-of-sample data.
-   - Explore interaction terms or non-linear relationships.
